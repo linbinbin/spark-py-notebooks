@@ -11,12 +11,19 @@ Engineering, you might find [these series of tutorials](https://github.com/jadia
 interesting. There we explain different concepts and applications 
 using Python and R.  
 
-## Instructions  
+これは、基本的なものから高度なものまで、さまざまなApache Sparkの概念をPython言語を使用して訓練するための、IPythonノートブック/ Jupyterノートブックのコレクションです。
+
+もしPythonがあなたの言語ではなく、それがRならば、代わりにApache Spark（SparkR）のRノートブックを見てみてください。 さらに、いくつかの基本的なデータサイエンスエンジニアリングに興味がある場合は、これらの一連のチュートリアルが興味深いかもしれません。 ここでは、PythonとRを使用して、さまざまな概念とアプリケーションについて説明します。
+
+
+## Instructions  説明書
+
 
 A good way of using these notebooks is by first cloning the repo, and then 
 starting your own [IPython notebook](http://ipython.org/notebook.html)/[Jupyter](https://jupyter.org/) in 
 **pySpark mode**. For example, if we have a *standalone* Spark installation
 running in our `localhost` with a maximum of 6Gb per node assigned to IPython:  
+これらのノートブックを使用する良い方法は、最初にrepoをクローンし、pySparkモードで自分のIPythonノートブック/ Jupyterを起動することです。 たとえば、IPythonに割り当てられたノードあたり最大6Gbのローカルホストで実行されるスタンドアロンのSparkインストールがあるとします。
 
     MASTER="spark://127.0.0.1:7077" SPARK_EXECUTOR_MEMORY="6G" IPYTHON_OPTS="notebook --pylab inline" ~/spark-1.5.0-bin-hadoop2.6/bin/pyspark
 
@@ -28,23 +35,32 @@ the same machine you are going to start the `IPython notebook` server.
 For more Spark options see [here](https://spark.apache.org/docs/latest/spark-standalone.html). In general it works the rule of passing options
 described in the form `spark.executor.memory` as `SPARK_EXECUTOR_MEMORY` when
 calling IPython/pySpark.   
+pysparkコマンドのパスは、特定のインストールによって異なります。 したがって、要件として、IPythonノートブックサーバを起動するマシンにSparkをインストールする必要があります。
+
+その他のスパークオプションについてはこちらをご覧ください。 一般に、IPython / pySparkを呼び出すときにspark.executor.memoryという形式で記述されたオプションをSPARK_EXECUTOR_MEMORYとして渡すルールが働きます。
+
  
 ## Datasets  
 
 We will be using datasets from the [KDD Cup 1999](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html). The results 
 of this competition can be found [here](http://cseweb.ucsd.edu/~elkan/clresults.html).  
+KDDカップ1999のデータセットを使用します。この競技の結果はここにあります。
 
 ## References
 
 The reference book for these and other Spark related topics is:  
 
 - *Learning Spark* by Holden Karau, Andy Konwinski, Patrick Wendell, and Matei Zaharia.  
+これらおよびその他のSpark関連トピックのリファレンスブックは次のとおりです。 
+Holden Karau、Andy Konwinski、Patrick Wendell、Matei ZahariaによるSparkの学習。
 
 ## Notebooks  
 
 The following notebooks can be examined individually, although there is a more
 or less linear 'story' when followed in sequence. By using the same dataset
 they try to solve a related set of tasks with it.  
+次のノートブックは個別に調べることができますが、順番に従うと多かれ少なかれ線形の「ストーリー」があります。同じデータセットを使用することによって、関連する一連のタスクを解決しようとします。
+
  
 ### [RDD creation](https://github.com/jadianes/spark-py-notebooks/blob/master/nb1-rdd-creation/nb1-rdd-creation.ipynb)  
 
