@@ -1,16 +1,5 @@
 # Spark Python Notebooks  
 
-[![Join the chat at https://gitter.im/jadianes/spark-py-notebooks](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jadianes/spark-py-notebooks?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-This is a collection of [IPython notebook](http://ipython.org/notebook.html)/[Jupyter](https://jupyter.org/) 
-notebooks intended to train the reader on different [Apache Spark](http://spark.apache.org/) concepts, from 
-basic to advanced, by using the **Python** language.  
-
-If Python is not your language, and it is R, you may want to have a look at our [R on Apache Spark (SparkR) notebooks](https://github.com/jadianes/spark-r-notebooks) instead. Additionally, if your are interested in being introduced to some basic Data Science
-Engineering, you might find [these series of tutorials](https://github.com/jadianes/data-science-your-way)
-interesting. There we explain different concepts and applications 
-using Python and R.  
-
 これは、基本的なものから高度なものまで、さまざまなApache Sparkの概念をPython言語を使用して訓練するための、IPythonノートブック/ Jupyterノートブックのコレクションです。
 
 もしPythonがあなたの言語ではなく、それがRならば、代わりにApache Spark（SparkR）のRノートブックを見てみてください。 さらに、いくつかの基本的なデータサイエンスエンジニアリングに興味がある場合は、これらの一連のチュートリアルが興味深いかもしれません。 ここでは、PythonとRを使用して、さまざまな概念とアプリケーションについて説明します。
@@ -18,23 +7,10 @@ using Python and R.
 
 ## Instructions  説明書
 
-
-A good way of using these notebooks is by first cloning the repo, and then 
-starting your own [IPython notebook](http://ipython.org/notebook.html)/[Jupyter](https://jupyter.org/) in 
-**pySpark mode**. For example, if we have a *standalone* Spark installation
-running in our `localhost` with a maximum of 6Gb per node assigned to IPython:  
 これらのノートブックを使用する良い方法は、最初にrepoをクローンし、pySparkモードで自分のIPythonノートブック/ Jupyterを起動することです。 たとえば、IPythonに割り当てられたノードあたり最大6Gbのローカルホストで実行されるスタンドアロンのSparkインストールがあるとします。
 
     MASTER="spark://127.0.0.1:7077" SPARK_EXECUTOR_MEMORY="6G" IPYTHON_OPTS="notebook --pylab inline" ~/spark-1.5.0-bin-hadoop2.6/bin/pyspark
 
-Notice that the path to the `pyspark` command will depend on your specific 
-installation. So as requirement, you need to have
-[Spark installed](https://spark.apache.org/docs/latest/index.html) in 
-the same machine you are going to start the `IPython notebook` server.     
-
-For more Spark options see [here](https://spark.apache.org/docs/latest/spark-standalone.html). In general it works the rule of passing options
-described in the form `spark.executor.memory` as `SPARK_EXECUTOR_MEMORY` when
-calling IPython/pySpark.   
 pysparkコマンドのパスは、特定のインストールによって異なります。 したがって、要件として、IPythonノートブックサーバを起動するマシンにSparkをインストールする必要があります。
 
 その他のスパークオプションについてはこちらをご覧ください。 一般に、IPython / pySparkを呼び出すときにspark.executor.memoryという形式で記述されたオプションをSPARK_EXECUTOR_MEMORYとして渡すルールが働きます。
@@ -42,74 +18,65 @@ pysparkコマンドのパスは、特定のインストールによって異な�
  
 ## Datasets  
 
-We will be using datasets from the [KDD Cup 1999](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html). The results 
-of this competition can be found [here](http://cseweb.ucsd.edu/~elkan/clresults.html).  
 KDDカップ1999のデータセットを使用します。この競技の結果はここにあります。
+[here](http://cseweb.ucsd.edu/~elkan/clresults.html)
+[KDD Cup 1999](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html)
 
 ## References
 
-The reference book for these and other Spark related topics is:  
+これらおよびその他のSpark関連トピックのリファレンスブックは次のとおりです。 :  
+- *Holden Karau、Andy Konwinski、Patrick Wendell、Matei ZahariaによるSparkの学習。
 
-- *Learning Spark* by Holden Karau, Andy Konwinski, Patrick Wendell, and Matei Zaharia.  
-これらおよびその他のSpark関連トピックのリファレンスブックは次のとおりです。 
-Holden Karau、Andy Konwinski、Patrick Wendell、Matei ZahariaによるSparkの学習。
 
 ## Notebooks  
 
-The following notebooks can be examined individually, although there is a more
-or less linear 'story' when followed in sequence. By using the same dataset
-they try to solve a related set of tasks with it.  
-次のノートブックは個別に調べることができますが、順番に従うと多かれ少なかれ線形の「ストーリー」があります。同じデータセットを使用することによって、関連する一連のタスクを解決しようとします。
+次のノートブックは個別に進めることができますが、順番に従うとそこには「ストーリー」があります。同じデータセットを使用することによって、関連する一連のタスクを解決しようとします。
 
  
-### [RDD creation](https://github.com/jadianes/spark-py-notebooks/blob/master/nb1-rdd-creation/nb1-rdd-creation.ipynb)  
+### [RDDの作成](https://github.com/jadianes/spark-py-notebooks/blob/master/nb1-rdd-creation/nb1-rdd-creation.ipynb)  
 
-About reading files and parallelize.  
+ファイルの読み込みと並列化について
   
-### [RDDs basics](https://github.com/jadianes/spark-py-notebooks/blob/master/nb2-rdd-basics/nb2-rdd-basics.ipynb)
+### [RDDの基礎](https://github.com/jadianes/spark-py-notebooks/blob/master/nb2-rdd-basics/nb2-rdd-basics.ipynb)
 
-A look at `map`, `filter`, and `collect`.  
+map, filter, collectについて
   
-### [Sampling RDDs](https://github.com/jadianes/spark-py-notebooks/blob/master/nb3-rdd-sampling/nb3-rdd-sampling.ipynb)  
+### [RDDのサンプリング](https://github.com/jadianes/spark-py-notebooks/blob/master/nb3-rdd-sampling/nb3-rdd-sampling.ipynb)  
 
-RDD sampling methods explained.    
+RDDサンプリング方法を説明。
   
-### [RDD set operations](https://github.com/jadianes/spark-py-notebooks/blob/master/nb4-rdd-set/nb4-rdd-set.ipynb)    
+### [RDDセット操作](https://github.com/jadianes/spark-py-notebooks/blob/master/nb4-rdd-set/nb4-rdd-set.ipynb)    
 
-Brief introduction to some of the RDD pseudo-set operations.  
+いくつかのRDD擬似セット操作の簡単な紹介。
 
-### [Data aggregations on RDDs](https://github.com/jadianes/spark-py-notebooks/blob/master/nb5-rdd-aggregations/nb5-rdd-aggregations.ipynb)  
+### [RDD上のデータ集約](https://github.com/jadianes/spark-py-notebooks/blob/master/nb5-rdd-aggregations/nb5-rdd-aggregations.ipynb)  
 
-RDD actions `reduce`, `fold`, and `aggregate`.   
+RDDアクション `reduce`, `fold`, `aggregate`について 。
 
-### [Working with key/value pair RDDs](https://github.com/jadianes/spark-py-notebooks/blob/master/nb6-rdd-key-value/nb6-rdd-key-value.ipynb)    
+### [キーと値のペアRDDの操作](https://github.com/jadianes/spark-py-notebooks/blob/master/nb6-rdd-key-value/nb6-rdd-key-value.ipynb)    
 
-How to deal with key/value pairs in order to aggregate and explore data.  
+データを集約して探索するためのキーと値のペアの扱い方。
   
-### [MLlib: Basic Statistics and Exploratory Data Analysis](https://github.com/jadianes/spark-py-notebooks/blob/master/nb7-mllib-statistics/nb7-mllib-statistics.ipynb)    
+### [MLlib：基本統計と探索的データ解析](https://github.com/jadianes/spark-py-notebooks/blob/master/nb7-mllib-statistics/nb7-mllib-statistics.ipynb)    
 
-A notebook introducing Local Vector types, basic statistics 
-in MLlib for Exploratory Data Analysis and model selection.  
+ローカルベクトルタイプ、Exploratory Data Analysisおよびモデル選択のためのMLlibの基本統計を紹介するノートブック。
   
-### [MLlib: Logistic Regression](https://github.com/jadianes/spark-py-notebooks/blob/master/nb8-mllib-logit/nb8-mllib-logit.ipynb)     
+### [MLlib：ロジスティック回帰](https://github.com/jadianes/spark-py-notebooks/blob/master/nb8-mllib-logit/nb8-mllib-logit.ipynb)     
 
-Labeled points and Logistic Regression classification of network attacks in MLlib.
-Application of model selection techniques using correlation matrix and Hypothesis Testing.    
+MLlibにおけるネットワーク攻撃のラベル付けされたポイントとロジスティック回帰の分類。相関行列と仮説検定を用いたモデル選択手法の応用。
 
-### [MLlib: Decision Trees](https://github.com/jadianes/spark-py-notebooks/blob/master/nb9-mllib-trees/nb9-mllib-trees.ipynb)  
+### [MLlib：デシジョンツリー](https://github.com/jadianes/spark-py-notebooks/blob/master/nb9-mllib-trees/nb9-mllib-trees.ipynb)  
 
-Use of tree-based methods and how they help explaining models and
- feature selection.  
+ツリーベースの方法の使用、およびモデルと機能の選択の説明に役立つ方法。
 
-### [Spark SQL: structured processing for Data Analysis](https://github.com/jadianes/spark-py-notebooks/blob/master/nb10-sql-dataframes/nb10-sql-dataframes.ipynb)  
+### [Spark SQL：データ分析のための構造化処理](https://github.com/jadianes/spark-py-notebooks/blob/master/nb10-sql-dataframes/nb10-sql-dataframes.ipynb)  
 
-In this notebook a schema is inferred for our network interactions dataset. Based on that, we use
-Spark's SQL `DataFrame` abstraction to perform a more structured exploratory data analysis.  
+このノートブックでは、ネットワークインタラクションのデータセットに対してスキーマが推論されます。それに基づいて、SparkのSQL DataFrame抽象化を使用して、より構造化された探索的データ分析を実行します。 
 
 
-## Applications  
+## アプリケーション  
 
-Beyond the basics. Close to real-world applications using Spark and other technologies.  
+基礎の先へ。 Sparkなどのテクノロジーを使用した実世界のアプリケーションに近い
 
 ### [Olssen: On-line Spectral Search ENgine for proteomics](https://github.com/jadianes/olssen)  
 
