@@ -22,6 +22,9 @@ KDDカップ1999のデータセットを使用します。この競技の結果�
 [here](http://cseweb.ucsd.edu/~elkan/clresults.html)
 [KDD Cup 1999](http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html)
 
+競合タスクは、侵入または攻撃と呼ばれる「悪い」接続と正常な接続を区別できるネットワーク侵入検出器を構築することでした。
+このデータベースには、軍事ネットワーク環境でシミュレートされたさまざまな侵入を含む、監査対象の標準データセットが含まれています。
+
 ## References
 
 これらおよびその他のSpark関連トピックのリファレンスブックは次のとおりです。 :  
@@ -33,43 +36,43 @@ KDDカップ1999のデータセットを使用します。この競技の結果�
 次のノートブックは個別に進めることができますが、順番に従うとそこには「ストーリー」があります。同じデータセットを使用することによって、関連する一連のタスクを解決しようとします。
 
  
-### [RDDの作成](https://github.com/jadianes/spark-py-notebooks/blob/master/nb1-rdd-creation/nb1-rdd-creation.ipynb)  
+### [RDDの作成](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb1-rdd-creation/nb1-rdd-creation.ipynb)  
 
 ファイルの読み込みと並列化について
   
-### [RDDの基礎](https://github.com/jadianes/spark-py-notebooks/blob/master/nb2-rdd-basics/nb2-rdd-basics.ipynb)
+### [RDDの基礎](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb2-rdd-basics/nb2-rdd-basics.ipynb)
 
 map, filter, collectについて
   
-### [RDDのサンプリング](https://github.com/jadianes/spark-py-notebooks/blob/master/nb3-rdd-sampling/nb3-rdd-sampling.ipynb)  
+### [RDDのサンプリング](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb3-rdd-sampling/nb3-rdd-sampling.ipynb)  
 
 RDDサンプリング方法を説明。
   
-### [RDDセット操作](https://github.com/jadianes/spark-py-notebooks/blob/master/nb4-rdd-set/nb4-rdd-set.ipynb)    
+### [RDDセット操作](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb4-rdd-set/nb4-rdd-set.ipynb)    
 
 いくつかのRDD擬似セット操作の簡単な紹介。
 
-### [RDD上のデータ集約](https://github.com/jadianes/spark-py-notebooks/blob/master/nb5-rdd-aggregations/nb5-rdd-aggregations.ipynb)  
+### [RDD上のデータ集約](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb5-rdd-aggregations/nb5-rdd-aggregations.ipynb)  
 
 RDDアクション `reduce`, `fold`, `aggregate`について 。
 
-### [キーと値のペアRDDの操作](https://github.com/jadianes/spark-py-notebooks/blob/master/nb6-rdd-key-value/nb6-rdd-key-value.ipynb)    
+### [キーと値のペアRDDの操作](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb6-rdd-key-value/nb6-rdd-key-value.ipynb)    
 
 データを集約して探索するためのキーと値のペアの扱い方。
   
-### [MLlib：基本統計と探索的データ解析](https://github.com/jadianes/spark-py-notebooks/blob/master/nb7-mllib-statistics/nb7-mllib-statistics.ipynb)    
+### [MLlib：基本統計と探索的データ解析](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb7-mllib-statistics/nb7-mllib-statistics.ipynb)    
 
 ローカルベクトルタイプ、Exploratory Data Analysisおよびモデル選択のためのMLlibの基本統計を紹介するノートブック。
   
-### [MLlib：ロジスティック回帰](https://github.com/jadianes/spark-py-notebooks/blob/master/nb8-mllib-logit/nb8-mllib-logit.ipynb)     
+### [MLlib：ロジスティック回帰](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb8-mllib-logit/nb8-mllib-logit.ipynb)     
 
 MLlibにおけるネットワーク攻撃のラベル付けされたポイントとロジスティック回帰の分類。相関行列と仮説検定を用いたモデル選択手法の応用。
 
-### [MLlib：デシジョンツリー](https://github.com/jadianes/spark-py-notebooks/blob/master/nb9-mllib-trees/nb9-mllib-trees.ipynb)  
+### [MLlib：デシジョンツリー](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb9-mllib-trees/nb9-mllib-trees.ipynb)  
 
 ツリーベースの方法の使用、およびモデルと機能の選択の説明に役立つ方法。
 
-### [Spark SQL：データ分析のための構造化処理](https://github.com/jadianes/spark-py-notebooks/blob/master/nb10-sql-dataframes/nb10-sql-dataframes.ipynb)  
+### [Spark SQL：データ分析のための構造化処理](https://github.com/miyamotok0105/spark-py-notebooks/blob/master/nb10-sql-dataframes/nb10-sql-dataframes.ipynb)  
 
 このノートブックでは、ネットワークインタラクションのデータセットに対してスキーマが推論されます。それに基づいて、SparkのSQL DataFrame抽象化を使用して、より構造化された探索的データ分析を実行します。 
 
